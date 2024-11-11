@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
 
         // Define the default brightness and colors.
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 11, 81, 194),
+          seedColor: const Color.fromARGB(255, 236, 8, 8),
           // ···
           brightness: Brightness.light,
         ),
