@@ -25,12 +25,12 @@ jobs:
       # Build the Flutter web app with secrets
       - name: Build Flutter Web App
         env:
-          SECRET_API_KEY1: ${{ secrets.SECRET_API_KEY1 }}
-          SECRET_API_KEY2: ${{ secrets.SECRET_API_KEY2 }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          DEEPGRAM_API_KEY: ${{ secrets.DEEPGRAM_API_KEY }}
         run: |
           flutter build web --release \
-            --dart-define=SECRET_API_KEY1=$SECRET_API_KEY1 \
-            --dart-define=SECRET_API_KEY2=$SECRET_API_KEY2
+            --dart-define=GOOGLE_AI_API_KEY=$GOOGLE_AI_API_KEY \
+            --dart-define=DEEPGRAM_API_KEY=$DEEPGRAM_API_KEY
       
       # Deploy to Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
