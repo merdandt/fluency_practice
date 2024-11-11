@@ -27,7 +27,6 @@ jobs:
         env:
           GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           DEEPGRAM_API_KEY: ${{ secrets.DEEPGRAM_API_KEY }}
-          FIREBASE_CLI_EXPERIMENTS: webframeworks
         run: |
           flutter build web --release \
             --dart-define=GOOGLE_AI_API_KEY=$GOOGLE_AI_API_KEY \
@@ -40,3 +39,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FLUENCY_PRACTICE }}'
           channelId: live
           projectId: fluency-practice
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
+
