@@ -21,8 +21,10 @@ class MainView extends StatelessWidget {
                   height: 20,
                 ),
                 // Topic selector page
-                const Text(String.fromEnvironment('GOOGLE_AI_API_KEY')),
-                const Text(String.fromEnvironment('DEEPGRAM_API_KEY')),
+                const Text(
+                    'Google:${const String.fromEnvironment('GOOGLE_AI_API_KEY')}'),
+                const Text(
+                    'Deepgram: ${const String.fromEnvironment('DEEPGRAM_API_KEY')}'),
                 const SizedBox(
                   height: 20,
                 ),
