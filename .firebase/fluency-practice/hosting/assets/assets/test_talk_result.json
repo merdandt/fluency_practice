@@ -1,0 +1,49 @@
+{
+    "grammatical_correctness": {
+      "error_rate": 10,
+      "accuracy_percentage": 90,
+      "errors": [
+        {
+          "sentence": "It change the way we communicate and how we access information.",
+          "correction": "It changes the way we communicate and how we access information."
+        },
+        {
+          "sentence": "However, there is also disadvantages, like people spending too much time on their phones.",
+          "correction": "However, there are also disadvantages, like people spending too much time on their phones."
+        }
+      ],
+      "description": "Assesses the correctness of grammatical structures used in the speech, including verb tenses and sentence structure."
+    },
+    "vocabulary_richness": {
+      "lexical_diversity": 0.85,
+      "advanced_vocabulary_usage": 15,
+      "suggestions": "Consider using more advanced vocabulary such as 'transform,' 'interact,' or 'ubiquitous' to enhance your speech.",
+      "description": "Evaluates the diversity and sophistication of the vocabulary used, including the use of advanced words."
+    },
+    "coherence_and_cohesion": {
+      "use_of_connectives": ["For example", "However"],
+      "logical_progression": 4,
+      "feedback": "The speech flows logically with appropriate use of connectives, but further development of ideas can improve cohesion.",
+      "description": "Measures the logical flow and connection between ideas, including the use of linking words."
+    },
+    "content_relevance": {
+      "topic_adherence_score": 5,
+      "idea_development": "The speech stays on topic and provides examples of both positive and negative impacts of technology.",
+      "description": "Evaluates how well the speech addresses the selected topic and the depth of content provided."
+    },
+    "error_analysis": {
+      "common_errors": [
+        {
+          "type": "Subject-verb agreement",
+          "frequency": 2
+        }
+      ],
+      "description": "Identifies specific types of errors made and their frequency to help focus improvement efforts.",
+      "mispronunciations": [
+        {
+          "word": "sight",
+          "sounded_as": "seat"
+        }
+      ]
+    }
+}
