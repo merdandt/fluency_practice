@@ -20,6 +20,12 @@ class MainView extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
+                // Topic selector page
+
+                const SizedBox(
+                  height: 20,
+                ),
+                //
                 SizedBox(
                   width: 300,
                   child: FilledButton(

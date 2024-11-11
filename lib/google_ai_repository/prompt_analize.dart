@@ -81,19 +81,21 @@ user_speech_text
   
 <OUTPUT RESPONSE>
 
-IMPORTANT:
+<IMPORTANT>
 <FORMATING GUIDELINES>
 - Ensure the JSON is properly formatted and parsable.
 - Use clear and concise language in explanations.
 - Do not include any additional text outside the JSON structure.
 - Use only the keys mentioned in the instructions.
-- Never include `null` valuse in the JSON response.
+- Never include `null` valuse in the JSON response. If you don't have a value, use an empty string or an empty array accroding to the type.
 - Output plain JSON in STRING format without any additional text or explanations like ```json, or "This is JSON:...".
 </FORMATING GUIDELINES>
+</IMPORTANT>
 
 <EXAMPLE>
-**SPPECH TEXT**:
+<INPUT>
 I think that the technology has a big impact on our lives. It change the way we communicate and how we access information. For example, we can now talk to people from different countries instantly. However, there is also disadvantages, like people spending too much time on their phones and losing seat of the world around them.
+</INPUT>
 
 <OUTPUT>
 {

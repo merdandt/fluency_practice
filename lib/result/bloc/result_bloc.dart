@@ -42,6 +42,9 @@ class ResultBloc extends Bloc<ResultEvent, ResultState> {
         print('FormatException: $e');
       }
     } catch (e) {
+      if (kDebugMode) {
+        print('Error: $e');
+      }
       emit(state.copyWith(loadingState: LoadingState.error));
     }
   }

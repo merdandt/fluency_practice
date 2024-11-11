@@ -77,7 +77,7 @@ class BetterVersionBloc extends Bloc<BetterVersionEvent, BetterVersionState> {
           speakingState: SpeakingState.speaking,
         ),
       );
-      await _deepgrammService.playTTS(tts).then((final _) => add(
+      await _deepgrammService.playTTS(tts).then((final v_) => add(
             const BetterVersionTextTransformationInterrupted(),
           ));
     } catch (e) {

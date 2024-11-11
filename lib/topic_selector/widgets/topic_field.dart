@@ -23,7 +23,6 @@ class TopicInputField extends StatelessWidget {
             onChanged: (final holder) {
               bloc.add(TopicSelectorTopicTitleChanged(holder));
             },
-            controller: TextEditingController(text: state.topicTitle.value),
           );
         },
       );

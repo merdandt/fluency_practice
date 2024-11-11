@@ -30,7 +30,7 @@ class StartTalkingButton extends StatelessWidget {
                     );
                   }
                 : null,
-            child: const Text('Start Talking', style: TextStyle(fontSize: 20)),
+            child: const Text('Start Training', style: TextStyle(fontSize: 20)),
           ),
         );
       },
