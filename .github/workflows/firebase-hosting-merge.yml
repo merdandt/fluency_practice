@@ -27,7 +27,11 @@ jobs:
         env:
           GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           DEEPGRAM_API_KEY: ${{ secrets.DEEPGRAM_API_KEY }}
-        run: flutter build web --release --dart-define=GOOGLE_AI_API_KEY="dfdf" --dart-define=DEEPGRAM_API_KEY="werer"
+        run: |
+          flutter clean
+          flutter build web --release \
+            --dart-define=GOOGLE_AI_API_KEY="$GOOGLE_AI_API_KEY" \
+            --dart-define=DEEPGRAM_API_KEY="$DEEPGRAM_API_KEY"
       
       # Deploy to Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
