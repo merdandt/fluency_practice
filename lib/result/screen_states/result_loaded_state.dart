@@ -20,39 +20,44 @@ class ResultLoadedState extends StatelessWidget {
             // Grammatical Correctness Section
             SectionHeader(
               title: 'Grammatical Correctness',
-              description: talkResult.grammaticalCorrectness.description,
+              description: talkResult.grammaticalCorrectness?.description ?? '',
             ),
-            GrammaticalCorrectnessCard(
-              data: talkResult.grammaticalCorrectness,
-            ),
+            if (talkResult.grammaticalCorrectness != null)
+              GrammaticalCorrectnessCard(
+                data: talkResult.grammaticalCorrectness!,
+              ),
 
             // Vocabulary Richness Section
             SectionHeader(
               title: 'Vocabulary Richness',
-              description: talkResult.vocabularyRichness.description,
+              description: talkResult.vocabularyRichness?.description ?? '',
             ),
-            VocabularyRichnessCard(data: talkResult.vocabularyRichness),
+            if (talkResult.vocabularyRichness != null)
+              VocabularyRichnessCard(data: talkResult.vocabularyRichness!),
 
             // Coherence and Cohesion Section
             SectionHeader(
               title: 'Coherence and Cohesion',
-              description: talkResult.coherenceAndCohesion.description,
+              description: talkResult.coherenceAndCohesion?.description ?? '',
             ),
-            CoherenceAndCohesionCard(data: talkResult.coherenceAndCohesion),
+            if (talkResult.coherenceAndCohesion != null)
+              CoherenceAndCohesionCard(data: talkResult.coherenceAndCohesion!),
 
             // Content Relevance Section
             SectionHeader(
               title: 'Content Relevance',
-              description: talkResult.contentRelevance.description,
+              description: talkResult.contentRelevance?.description ?? '',
             ),
-            ContentRelevanceCard(data: talkResult.contentRelevance),
+            if (talkResult.contentRelevance != null)
+              ContentRelevanceCard(data: talkResult.contentRelevance!),
 
             // Error Analysis Section
             SectionHeader(
               title: 'Error Analysis',
-              description: talkResult.errorAnalysis.description,
+              description: talkResult.errorAnalysis?.description ?? '',
             ),
-            ErrorAnalysisCard(data: talkResult.errorAnalysis),
+            if (talkResult.errorAnalysis != null)
+              ErrorAnalysisCard(data: talkResult.errorAnalysis!),
           ],
         ),
       ),

@@ -36,7 +36,7 @@ class GrammaticalCorrectnessCard extends StatelessWidget {
             leading: const Icon(Icons.error, color: Colors.red),
             title:
                 const Text('Incorrect:', style: TextStyle(color: Colors.red)),
-            subtitle: Text(error.sentence),
+            subtitle: Text(error.sentence ?? ''),
             trailing: const Icon(Icons.arrow_forward, color: Colors.grey),
             onTap: () {
               // Show corrected sentence
@@ -45,7 +45,7 @@ class GrammaticalCorrectnessCard extends StatelessWidget {
                 builder: (BuildContext context) {
                   return AlertDialog(
                     title: const Text('Correction'),
-                    content: Text(error.correction),
+                    content: Text(error.correction ?? ""),
                     actions: [
                       TextButton(
                         child: const Text('Close',
@@ -74,19 +74,22 @@ class GrammaticalCorrectnessCard extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              _buildLinearProgressIndicator(
-                label: 'Accuracy Percentage',
-                percentage: data.accuracyPercentage / 100,
-                color: Colors.green,
-              ),
+              if (data.accuracyPercentage != null)
+                _buildLinearProgressIndicator(
+                  label: 'Accuracy Percentage',
+                  percentage: data.accuracyPercentage! / 100,
+                  color: Colors.green,
+                ),
               const SizedBox(height: 10),
-              _buildLinearProgressIndicator(
-                label: 'Error Rate',
-                percentage: data.errorRate / 100,
-                color: Colors.red,
-              ),
+              if (data.errorRate != null)
+                _buildLinearProgressIndicator(
+                  label: 'Error Rate',
+                  percentage: data.errorRate! / 100,
+                  color: Colors.red,
+                ),
               const SizedBox(height: 10),
-              _buildErrorList(context, data.errors),
+              if (data.errors?.isNotEmpty ?? false)
+                _buildErrorList(context, data.errors!),
             ],
           ),
         ),

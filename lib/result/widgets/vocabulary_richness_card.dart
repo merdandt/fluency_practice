@@ -67,9 +67,10 @@ class VocabularyRichnessCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  _buildCircularChart(
-                    percentage: data.lexicalDiversity,
-                  ),
+                  if (data.lexicalDiversity != null)
+                    _buildCircularChart(
+                      percentage: data.lexicalDiversity!,
+                    ),
                   const Expanded(
                     child: Text(
                       'Lexical Diversity measures the ratio of unique words to total words.',
@@ -90,9 +91,10 @@ class VocabularyRichnessCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  _buildCircularChart(
-                    percentage: data.advancedVocabularyUsage / 100,
-                  ),
+                  if (data.advancedVocabularyUsage != null)
+                    _buildCircularChart(
+                      percentage: data.advancedVocabularyUsage! / 100,
+                    ),
                   const Expanded(
                     child: Text(
                       'Advanced Vocabulary Usage indicates the percentage of advanced words used.',
@@ -102,7 +104,8 @@ class VocabularyRichnessCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              _buildSuggestions(data.suggestions),
+              if (data.suggestions != null)
+                _buildSuggestions(data.suggestions!),
             ],
           ),
         ),

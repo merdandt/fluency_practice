@@ -25,12 +25,14 @@ class ContentRelevanceCard extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              RatingBar(
-                label: 'Topic Adherence Score',
-                rating: data.topicAdherenceScore,
-              ),
+              if (data.topicAdherenceScore != null)
+                RatingBar(
+                  label: 'Topic Adherence Score',
+                  rating: data.topicAdherenceScore!,
+                ),
               const SizedBox(height: 10),
-              _buildIdeaDevelopment(data.ideaDevelopment),
+              if (data.ideaDevelopment != null)
+                _buildIdeaDevelopment(data.ideaDevelopment!),
             ],
           ),
         ),

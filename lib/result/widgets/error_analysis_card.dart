@@ -14,7 +14,7 @@ class ErrorAnalysisCard extends StatelessWidget {
         ...errors.map((error) {
           return ListTile(
             leading: const Icon(Icons.warning, color: Colors.red),
-            title: Text(error.type,
+            title: Text(error.type ?? 'Unknown Error',
                 style: const TextStyle(fontWeight: FontWeight.bold)),
             trailing: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
@@ -87,9 +87,11 @@ class ErrorAnalysisCard extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              _buildCommonErrorsList(data.commonErrors),
+              if (data.commonErrors?.isNotEmpty ?? false)
+                _buildCommonErrorsList(data.commonErrors!),
               const SizedBox(height: 10),
-              _buildMispronunciationsList(data.mispronunciations),
+              if (data.mispronunciations?.isNotEmpty ?? false)
+                _buildMispronunciationsList(data.mispronunciations!),
             ],
           ),
         ),

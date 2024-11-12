@@ -43,14 +43,16 @@ class CoherenceAndCohesionCard extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              _buildConnectivesList(data.useOfConnectives),
+              if (data.useOfConnectives?.isNotEmpty ?? false)
+                _buildConnectivesList(data.useOfConnectives!),
               const SizedBox(height: 10),
-              RatingBar(
-                label: 'Logical Progression',
-                rating: data.logicalProgression,
-              ),
+              if (data.logicalProgression != null)
+                RatingBar(
+                  label: 'Logical Progression',
+                  rating: data.logicalProgression!,
+                ),
               const SizedBox(height: 10),
-              _buildFeedback(data.feedback),
+              if (data.feedback != null) _buildFeedback(data.feedback!),
             ],
           ),
         ),
