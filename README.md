@@ -9,6 +9,45 @@ The **Fluency Practice App** is designed to help users practice and improve thei
 - View and listen to an improved version of their speech.
 
 ---
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screens/1.png" alt="Screenshot 1" width="200"/>
+      <br/>
+      <b>Screenshot 1</b>
+    </td>
+    <td align="center">
+      <img src="screens/2.png" alt="Screenshot 2" width="200"/>
+      <br/>
+      <b>Screenshot 2</b>
+    </td>
+    <td align="center">
+      <img src="screens/3.png" alt="Screenshot 3" width="200"/>
+      <br/>
+      <b>Screenshot 3</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screens/4.png" alt="Screenshot 4" width="200"/>
+      <br/>
+      <b>Screenshot 4</b>
+    </td>
+    <td align="center">
+      <img src="screens/5.png" alt="Screenshot 5" width="200"/>
+      <br/>
+      <b>Screenshot 5</b>
+    </td>
+    <td align="center">
+      <img src="screens/6.png" alt="Screenshot 6" width="200"/>
+      <br/>
+      <b>Screenshot 6</b>
+    </td>
+  </tr>
+</table>
+
 
 ## Getting Started
 
