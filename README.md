@@ -1,4 +1,5 @@
 # Fluency Practice App
+Android, iOS, and Web
 
 ## Overview
 
@@ -14,36 +15,36 @@ The **Fluency Practice App** is designed to help users practice and improve thei
 <table>
   <tr>
     <td align="center">
-      <img src="screens/1.png" alt="Screenshot 1" width="200"/>
+      <img src="screens/1.png" alt="Intro screen" width="200"/>
       <br/>
-      <b>Screenshot 1</b>
+      <b>Intro screen</b>
     </td>
     <td align="center">
-      <img src="screens/2.png" alt="Screenshot 2" width="200"/>
+      <img src="screens/2.png" alt="Topics screen" width="200"/>
       <br/>
-      <b>Screenshot 2</b>
+      <b>Topics screen</b>
     </td>
     <td align="center">
-      <img src="screens/3.png" alt="Screenshot 3" width="200"/>
+      <img src="screens/3.png" alt="Confirmation screen" width="200"/>
       <br/>
-      <b>Screenshot 3</b>
+      <b>Confirmation screen</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="screens/4.png" alt="Screenshot 4" width="200"/>
+      <img src="screens/4.png" alt="Recording screen" width="200"/>
       <br/>
-      <b>Screenshot 4</b>
+      <b>Recording screen</b>
     </td>
     <td align="center">
-      <img src="screens/5.png" alt="Screenshot 5" width="200"/>
+      <img src="screens/5.png" alt="Analysis screen1" width="200"/>
       <br/>
-      <b>Screenshot 5</b>
+      <b>Analysis screen</b>
     </td>
     <td align="center">
-      <img src="screens/6.png" alt="Screenshot 6" width="200"/>
+      <img src="screens/6.png" alt="Analysis screen2" width="200"/>
       <br/>
-      <b>Screenshot 6</b>
+      <b>Analysis screen</b>
     </td>
   </tr>
 </table>
@@ -61,6 +62,7 @@ Ensure you have the following installed on your machine:
 - **API Keys**:
   - **Deepgram API Key**: For speech processing.
   - **Google AI API Key**: For speech-to-text analysis.
+- **Web deployment**: [See the instructions](https://docs.flutter.dev/deployment/web).
 
 ---
 
